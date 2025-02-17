@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:weather_app_bloc/widget/weather_detail_tile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -87,6 +88,71 @@ class HomeScreen extends StatelessWidget {
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
                       ),
+                    ),
+                    Image.asset(
+                      'assets/1.png',
+                    ),
+                    Center(
+                      child: Text(
+                        '21 C',
+                        style: TextStyle(
+                          fontSize: 55,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        'THUNDERSTORM',
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: Text(
+                        'Friday 16 - 08.41 am',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        WeatherDetailTile(
+                          title: 'Sunrise',
+                          time: '06:40 am',
+                          assetPath: 'assets/11.png',
+                        ),
+                        WeatherDetailTile(
+                          title: 'Sunset',
+                          time: '06:40 pm',
+                          assetPath: 'assets/12.png',
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        WeatherDetailTile(
+                          title: 'Temp Max',
+                          time: '28°C',
+                          assetPath: 'assets/13.png',
+                        ),
+                        WeatherDetailTile(
+                          title: 'Temp Min',
+                          time: '12°C',
+                          assetPath: 'assets/14.png',
+                        ),
+                      ],
                     )
                   ],
                 ),
