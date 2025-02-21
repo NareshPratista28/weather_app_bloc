@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class WeatherDetailTile extends StatelessWidget {
   final String title;
-  final String time;
+  final String value;
   final String assetPath;
 
   const WeatherDetailTile({
     super.key,
     required this.title,
-    required this.time,
+    required this.value,
     required this.assetPath,
   });
 
@@ -35,7 +35,7 @@ class WeatherDetailTile extends StatelessWidget {
               height: 3,
             ),
             Text(
-              time,
+              value,
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
